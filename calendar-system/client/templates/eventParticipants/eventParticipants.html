@@ -1,0 +1,10 @@
+<template name="eventParticipants">
+	{{#if participantsList.count   }}   
+		<h3>Participants List : </h3>
+		{{#each participantsList}}
+			<div> <b>Invitation send to :</b>  {{invitationTo_displayName}} - <b>Status :</b> {{ status}}
+			</div> 
+		{{/each}}
+		<hr/>
+	{{/if}}
+</template>	

@@ -1,0 +1,14 @@
+<head>
+  <title>Web Based Calendar System</title>
+</head>
+
+<body>
+	{{#if currentUser}}
+		{{ > calendarTemplate}}
+	{{else}}
+		<div class="container">
+		<h2>Calendar System</h2>
+		{{ > loginButtons}}
+		</div>
+	{{/if}}
+</body> 

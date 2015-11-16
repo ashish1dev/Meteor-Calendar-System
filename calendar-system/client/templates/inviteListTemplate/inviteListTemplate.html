@@ -1,0 +1,53 @@
+<template name="inviteListTemplate">
+	<hr/>
+		{{#if inviteReceived.count   }} 
+		<h4>Invite Received : </h4>
+		<div class="table-responsive" style="width:80%">
+			<table class="table">
+				<thead>
+					<tr> 
+						<th class="col-md-1">From</th>
+						<th class="col-md-2">Event Details</th>
+						<th class="col-md-1">Accept</th>
+						<th class="col-md-1">Reject</th>  
+					</tr>
+				</thead>
+				<tbody> 
+					{{#each inviteReceived}} 
+					<tr> 
+						<td class="col-md-1">{{ce.user}}</td>
+						<td class="col-md-2">  {{ce.title}} - {{ce.start}} to {{ce.end}}   </td>
+						<td class="col-md-1"><input type="button" class='accept btn btn-success' value="Accept" /></td>
+						<td class="col-md-1"><input type="button" class='reject btn btn-danger' value="Reject" />	</td> 
+					</tr>
+					{{/each}}
+				</tbody>
+			</table>
+		</div> 
+	{{/if}}
+		
+	{{#if inviteSend.count   }} 
+		<h4>Invite Send : </h4>
+		<div class="table-responsive" style="width:80%">
+			<table class="table  ">
+				<thead>
+					<tr> 
+						<th class="col-md-1">To</th>
+						<th class="col-md-2">Event Details</th>
+						<th class="col-md-1">Status</th> 
+					</tr>
+				</thead>
+				<tbody>
+					{{#each inviteSend}} 
+						<tr> 
+							<td  class="col-md-1" >{{invitationTo_displayName}} </td>
+							<td  class="col-md-2">  {{ce.title}} - {{ce.start}} to {{ce.end}}  </td>
+							<td class="col-md-1">{{ status}}</td> 
+						</tr>
+					{{/each}}
+				</tbody>
+			</table>
+		</div>
+		<hr/>
+	{{/if}}
+</template>	

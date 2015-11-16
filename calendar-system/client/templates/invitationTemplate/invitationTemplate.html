@@ -1,0 +1,5 @@
+<template name="invitationTemplate">
+	{{#each user}}
+	   <div>  {{registered_emails.[0].address}} - {{profile.name }}  <input type="button" class='invite btn btn-default' value="Invite" /> </div>
+	{{/each}}
+</template>

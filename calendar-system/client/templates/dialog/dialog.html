@@ -1,0 +1,31 @@
+<template name="dialog"> 
+	<!-- Modal --> 
+	<div id="myModal" class="modal fade in " style="left:50%; height:85%; width:50%;"   tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true"> 
+		<div class="modal-dialog  "> 
+			<!-- Modal content--> 
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close closeDialog" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title">Edit Event</h4>
+				</div>
+				<div class="modal-body">
+					<p>Update the title for this event</p>
+					<div class="form-group">
+						<label for="'title">Title</label>
+						<input type="text" class="form-control" id="title"  name="title" placeholder="Enter a Title" value={{title}} />
+					</div>
+					<div class="form-group">
+						{{> eventParticipants}}
+					</div>
+					<div class="form-group">
+						{{>invitationTemplate}}
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default  closeDialog" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-primary saveEvent" data-dismiss="modal" >Save</button>
+				</div>
+			</div> 
+		</div>
+	</div>
+</template>
